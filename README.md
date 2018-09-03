@@ -51,5 +51,5 @@ DeleteDomain 删除域名
 DescribeDomains 获取域名列表
 DescribeDomainInfo 获取域名信息
 IModifyHichinaDomainDNS 修改万网域名DNS
-
+GetMainDomainName 获取主域名名称 
 DescribeDomainRecords 获取解析记录列表

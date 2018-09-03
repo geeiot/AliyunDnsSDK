@@ -18,21 +18,25 @@ namespace Test.Demo
             //Init Api
             AliyunDnsApi request = new AliyunDnsApi();
 
-            //Init DescribeDomainRecords object
-            IModifyHichinaDomainDNS describeDomainRecords = new IModifyHichinaDomainDNS()
+            //实例化接口类
+            IDescribeDomainRecords describeDomainRecords = new IDescribeDomainRecords()
             {
-                DomainName = "geeiot.net",
+                DomainName = "geeiot.net"
             };
 
-            //Get and out result
-            ModifyHichinaDomainDNSResult result = request.Request<ModifyHichinaDomainDNSResult>(describeDomainRecords, true);
-            if (result == null)
+            //获取和输出数据
+            DomainRecords domain = new DomainRecords();
+            domain = request.Request<DescribeDomainRecordsResult>(describeDomainRecords).DomainRecords; //泛型参数为Result实体模型
+            if (domain != null && domain.Record.Count > 0)
             {
-                Console.WriteLine("请求失败！");
+                foreach (var item in domain.Record)
+                {
+                    Console.WriteLine(item.RecordId + "\t" + item.DomainName + "\t" + item.Status + "\t" + item.RR + "\t" + item.Value);
+                }
             }
             else
             {
-                Console.WriteLine("请求成功！");
+                Console.WriteLine("请求失败！");
             }
 
             Console.ReadKey(false);
