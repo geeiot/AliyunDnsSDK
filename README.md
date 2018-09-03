@@ -1,10 +1,10 @@
 # AliyunDdns
-阿里云解析接口SDK，可以使用本SDK对域名解析进行相关操作。请确保在使用这些接口前，已充分了解阿里云解析产品说明和使用协议。
+阿里云解析接口SDK，可以使用本SDK对域名解析进行相关操作。请确保在使用这些接口前，已充分了解阿里云解析产品说明和使用协议。<br />
 
 **如何使用**
 
-1、配置
-在项目Config文件的appSettings节点下面配置以下参数。
+1、配置<br />
+在项目Config文件的appSettings节点下面配置以下参数。<br />
 ```csharp
 <appSettings>
     <!--请修改你的AccessKeyId和AccessKeySecret-->
@@ -19,10 +19,10 @@
 </appSettings>
 ```
 
-2、添加相关的模型
-项目开发初期，大多数模型未添加，需要哪些模型，自行添加即可。对于Result实体，可以将官方文档提供的JSON格式数据提供下面的工具直接转化为实体模型。工具地址：http://www.bejson.com/convert/json2csharp/
+2、添加相关的模型<br />
+项目开发初期，大多数模型未添加，需要哪些模型，自行添加即可。对于Result实体，可以将官方文档提供的JSON格式数据提供下面的工具直接转化为实体模型。工具地址：http://www.bejson.com/convert/json2csharp/ <br />
 
-3、代码使用（Demo）
+3、代码使用（Demo）<br />
 ```csharp
 //Init Api
 AliyunDnsApi request = new AliyunDnsApi();
