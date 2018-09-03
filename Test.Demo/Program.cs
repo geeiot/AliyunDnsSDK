@@ -19,10 +19,10 @@ namespace Test.Demo
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            IDescribeDomainLogs describeDomainRecords = new IDescribeDomainLogs();
+            IDescribeDnsProductInstances describeDomainRecords = new IDescribeDnsProductInstances();
 
             //Get and out result
-            DescribeDomainLogsResult result = request.Request<DescribeDomainLogsResult>(describeDomainRecords, true);
+            DescribeDnsProductInstancesResult result = request.Request<DescribeDnsProductInstancesResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");
