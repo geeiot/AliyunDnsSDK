@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using AliyunDnsSDK;
 using AliyunDnsSDK.Model.DataType;
+using AliyunDnsSDK.Model.EnumType;
 using AliyunDnsSDK.Model.Interfaces;
 using AliyunDnsSDK.Model.Results;
 
@@ -19,10 +20,16 @@ namespace Test.Demo
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            IDescribeDnsProductInstances describeDomainRecords = new IDescribeDnsProductInstances();
+            ICheckDomainRecord describeDomainRecords = new ICheckDomainRecord()
+            {
+                DomainName = "geeiot.net",
+                Type = ResolveLogFormat.A.ToString(),
+                RR = "www",
+                Value = "132.232.22.114"
+            };
 
             //Get and out result
-            DescribeDnsProductInstancesResult result = request.Request<DescribeDnsProductInstancesResult>(describeDomainRecords, true);
+            CheckDomainRecordResult result = request.Request<CheckDomainRecordResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");
