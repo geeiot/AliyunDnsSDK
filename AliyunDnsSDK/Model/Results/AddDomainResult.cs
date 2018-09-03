@@ -54,7 +54,7 @@ namespace AliyunDnsSDK.Model.Results
         /// <summary>
         /// 域名在解析系统中的DNS列表
         /// </summary>
-        public List<DnsServerType> DnsServer { get; set; }
+        public List<string> DnsServer { get; set; }
     }
 
 }

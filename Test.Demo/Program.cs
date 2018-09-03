@@ -21,7 +21,7 @@ namespace Test.Demo
             //Init DescribeDomainRecords object
             IAddDomain describeDomainRecords = new IAddDomain()
             {
-                DomainName = "quarkbook.com"
+                DomainName = "yunser.cn"
             };
 
             //Get and out result
@@ -33,7 +33,7 @@ namespace Test.Demo
             }
             else
             {
-                dnsServers = result.DnsServers.DnsServer;
+                //dnsServers = result.DnsServers.DnsServer;
             }
 
 

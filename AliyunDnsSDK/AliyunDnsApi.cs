@@ -123,7 +123,7 @@ namespace AliyunDnsSDK
                         }
                         else if (item.Name == "SignatureNonce")
                         {
-                            item.SetValue(obj, Guid.NewGuid().ToString());
+                            item.SetValue(obj, BuildSignatureNonce());
                         }
                     }
                 }
@@ -141,6 +141,26 @@ namespace AliyunDnsSDK
             sb.Append("&%2F&");
             sb.Append(UrlCode.Encode(str));
             return sb.ToString();
+        }
+
+        private string BuildSignatureNonce()
+        {
+            StringBuilder SB = new StringBuilder();
+            string guid = Guid.NewGuid().ToString();
+            string staticKey = "www.geeiot.net";
+            string str = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+            
+            Random rd = new Random();
+            int length = rd.Next(8, 20);
+            for (int i = 0; i < length; i++)
+            {
+                SB.Append(str.Substring(rd.Next(0, str.Length), 1));
+            }
+            SB.Append("_");
+            SB.Append(staticKey);
+            SB.Append("_");
+            SB.Append(guid);
+            return Encrypt.MD5(SB.ToString());
         }
     }
 }

@@ -34,7 +34,7 @@ DescribeDomainRecords describeDomainRecords = new DescribeDomainRecords()
 };
 
 //获取和输出数据
-DomainRecords domain = new DomainRecords();
+IDomainRecords domain = new IDomainRecords();
 domain = request.Request<DescribeDomainRecordsResult>(describeDomainRecords).DomainRecords; //泛型参数为Result实体模型
 if (domain != null && domain.Record.Count > 0)
 {
@@ -44,3 +44,7 @@ if (domain != null && domain.Record.Count > 0)
     }
 }
 ```
+
+4、目前可用接口
+AddDomain 添加域名
+DescribeDomainRecords 获取解析记录列表

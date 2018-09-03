@@ -38,7 +38,7 @@ namespace AliyunDnsSDK.Logger
                 lock (locker)
                 {
                     string logStr = string.Empty;
-                    logStr += $"ClassName:{className}\r\nMethodName:{methodName}\r\nError:{log}\r\nUrl:{requestUrl}\r\nTime:{Time.GetStandardTime()}\r\n\r\n";
+                    logStr += $"ClassName:{className}\r\nMethodName:{methodName}\r\nMessage:{log}\r\nUrl:{requestUrl}\r\nTime:{Time.GetStandardTime()}\r\n\r\n";
                     WriteFile(logStr);
                 }
             }
