@@ -10,6 +10,8 @@ namespace AliyunDnsSDK.Model.Results
 {
     /// <summary>
     /// 域名解析列表返回数据模型
+    /// 更新时间：2017-06-07 13:26:11
+    /// 文档地址：https://help.aliyun.com/document_detail/29776.html?spm=a2c4g.11186623.6.638.23c21ba8FHVAdQ
     /// 可通过 http://www.bejson.com/convert/json2csharp/ 此工具直接将阿里云给出的JSON转化为实体模型
     /// </summary>
     public class DescribeDomainRecordsResult : ResultPublicParameters

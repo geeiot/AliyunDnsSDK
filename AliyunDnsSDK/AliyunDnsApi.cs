@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Text;
 
 using AliyunDnsSDK.Helper;
+using AliyunDnsSDK.Logger;
 
 namespace AliyunDnsSDK
 {
@@ -15,7 +16,7 @@ namespace AliyunDnsSDK
             Config config = new Config();
         }
 
-        public T Request<T>(object obj) where T : class
+        public T Request<T>(object obj, bool isSaveLog = false) where T : class
         {
             HttpHelper httpHelper = new HttpHelper();
 
@@ -25,14 +26,32 @@ namespace AliyunDnsSDK
                 string result = httpHelper.HttpGet(requestUrl);
                 if (string.IsNullOrEmpty(result))
                 {
-                    Console.WriteLine("请求失败，返回的数据为空！");
+                    if (isSaveLog)
+                    {
+                        Log.Write("请求失败，返回的数据为空！", requestUrl, LogType.Error, MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name);
+                    }
                     return null;
                 }
-                return JsonHelper.DeserializeJsonToObject<T>(result);
+                else
+                {
+                    if (isSaveLog)
+                    {
+                        Log.Write("请求成功！", requestUrl, LogType.Error, MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name);
+                    }
+                    return JsonHelper.DeserializeJsonToObject<T>(result);
+                }
             }
             catch (Exception ex)
             {
-                throw ex;
+                if (isSaveLog)
+                {
+                    Log.Write($"{ex.Message}", requestUrl, LogType.Error, MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name);
+                    return null;
+                }
+                else
+                {
+                    throw ex;
+                }
             }
         }
 

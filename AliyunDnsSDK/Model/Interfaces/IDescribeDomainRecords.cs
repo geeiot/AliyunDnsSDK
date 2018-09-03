@@ -8,6 +8,8 @@ namespace AliyunDnsSDK.Model.Interfaces
 {
     /// <summary>
     /// 获取解析记录列表
+    /// 更新时间：2017-06-07 13:26:11
+    /// 文档地址：https://help.aliyun.com/document_detail/29776.html?spm=a2c4g.11186623.6.638.23c21ba8FHVAdQ
     /// </summary>
     public class IDescribeDomainRecords : InterfacePublicParameters
     {

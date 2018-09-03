@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using AliyunDnsSDK;
+using AliyunDnsSDK.Model.DataType;
 using AliyunDnsSDK.Model.Interfaces;
 using AliyunDnsSDK.Model.Results;
 
@@ -18,21 +19,23 @@ namespace Test.Demo
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            IDescribeDomainRecords describeDomainRecords = new IDescribeDomainRecords()
+            IAddDomain describeDomainRecords = new IAddDomain()
             {
-                DomainName = "1byte.cn"
+                DomainName = "quarkbook.com"
             };
 
             //Get and out result
-            DomainRecords domain = new DomainRecords();
-            domain = request.Request<DescribeDomainRecordsResult>(describeDomainRecords).DomainRecords;
-            if (domain != null && domain.Record.Count > 0)
+            List<DnsServerType> dnsServers = new List<DnsServerType>();
+            AddDomainResult result = request.Request<AddDomainResult>(describeDomainRecords,true);
+            if (result == null)
             {
-                foreach (var item in domain.Record)
-                {
-                    Console.WriteLine(item.RecordId + "\t" + item.DomainName + "\t" + item.Status + "\t" + item.RR + "\t" + item.Value);
-                }
+                Console.WriteLine("请求失败！");
             }
+            else
+            {
+                dnsServers = result.DnsServers.DnsServer;
+            }
+
 
             Console.ReadKey(false);
         }

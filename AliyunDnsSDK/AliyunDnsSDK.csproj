@@ -74,6 +74,8 @@
     <Compile Include="Helper\SQLiteHelper.cs" />
     <Compile Include="Helper\Time.cs" />
     <Compile Include="Helper\UrlCode.cs" />
+    <Compile Include="Logger\Log.cs" />
+    <Compile Include="Logger\LogType.cs" />
     <Compile Include="Model\DataType\BatchFailResultType.cs" />
     <Compile Include="Model\DataType\DataTypePublicParameters.cs" />
     <Compile Include="Model\DataType\DnsProductType.cs" />
@@ -88,8 +90,10 @@
     <Compile Include="Model\DataType\SLBSubDomainType.cs" />
     <Compile Include="Model\EnumType\ResolveLine.cs" />
     <Compile Include="Model\EnumType\ResolveLogFormat.cs" />
+    <Compile Include="Model\Interfaces\IAddDomain.cs" />
     <Compile Include="Model\Interfaces\IDescribeDomainRecords.cs" />
     <Compile Include="Model\Interfaces\InterfacePublicParameters.cs" />
+    <Compile Include="Model\Results\AddDomainResult.cs" />
     <Compile Include="Model\Results\DescribeDomainRecordsResult.cs" />
     <Compile Include="Model\Results\ResultPublicParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
