@@ -19,23 +19,21 @@ namespace Test.Demo
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            IAddDomain describeDomainRecords = new IAddDomain()
+            IDeleteDomain describeDomainRecords = new IDeleteDomain()
             {
                 DomainName = "yunser.cn"
             };
 
             //Get and out result
-            List<DnsServerType> dnsServers = new List<DnsServerType>();
-            AddDomainResult result = request.Request<AddDomainResult>(describeDomainRecords,true);
+            DeleteDomainResult result = request.Request<DeleteDomainResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");
             }
             else
             {
-                //dnsServers = result.DnsServers.DnsServer;
+                Console.WriteLine("请求成功！");
             }
-
 
             Console.ReadKey(false);
         }
