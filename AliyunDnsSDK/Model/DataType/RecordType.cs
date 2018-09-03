@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace AliyunDnsSDK.Model.DataType
 {
+    /// <summary>
+    /// 列举域名解析记录信息的类型。
+    /// 节点名：Record
+    /// 更新时间：2017-06-07 13:26:11
+    /// </summary>
     public class RecordType : DataTypePublicParameters
     {
         /// <summary>
