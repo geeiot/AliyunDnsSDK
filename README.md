@@ -66,5 +66,5 @@ else
 | 6  | IGetMainDomainName  | 获取主域名名称   | 是  | 见官网  |
 | 7  | IDescribeDomainLogs  | 获取域名操作日志   | 是  | 见官网  |
 | 8  | IDescribeDnsProductInstances  | 获取云解析收费版本产品列表   | 是  | 见官网  |
-| 9  | IDescribeDomainRecords  | 获取解析记录列表   | 是  | 见官网 |
-
+| 9  | IChangeDomainOfDnsProduct  | 更换云解析产品绑定的域名   | 否  | 见官网  |
+| 10  | IDescribeDomainRecords  | 获取解析记录列表   | 是  | 见官网 |
