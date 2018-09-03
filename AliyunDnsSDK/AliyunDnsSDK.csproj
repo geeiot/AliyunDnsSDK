@@ -91,10 +91,14 @@
     <Compile Include="Model\EnumType\ResolveLine.cs" />
     <Compile Include="Model\EnumType\ResolveLogFormat.cs" />
     <Compile Include="Model\Interfaces\IAddDomain.cs" />
+    <Compile Include="Model\Interfaces\IDeleteDomain.cs" />
     <Compile Include="Model\Interfaces\IDescribeDomainRecords.cs" />
+    <Compile Include="Model\Interfaces\IDescribeDomains.cs" />
     <Compile Include="Model\Interfaces\InterfacePublicParameters.cs" />
     <Compile Include="Model\Results\AddDomainResult.cs" />
+    <Compile Include="Model\Results\DeleteDomainResult.cs" />
     <Compile Include="Model\Results\DescribeDomainRecordsResult.cs" />
+    <Compile Include="Model\Results\DescribeDomainsResult.cs" />
     <Compile Include="Model\Results\ResultPublicParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

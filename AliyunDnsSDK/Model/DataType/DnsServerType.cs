@@ -16,6 +16,6 @@ namespace AliyunDnsSDK.Model.DataType
         /// <summary>
         /// DNS服务器名称，如dns1.hichina.com
         /// </summary>
-        public string DnsServer { get; set; }
+        public List<string> DnsServer { get; set; }
     }
 }

@@ -42,19 +42,10 @@ namespace AliyunDnsSDK.Model.Results
         /// <summary>
         /// 域名在解析系统中的DNS列表
         /// </summary>
-        public DnsServers DnsServers { get; set; }
+        public DnsServerType DnsServers { get; set; }
 
         //========================================================
 
         public override string RequestId { get; set; }
     }
-
-    public class DnsServers
-    {
-        /// <summary>
-        /// 域名在解析系统中的DNS列表
-        /// </summary>
-        public List<string> DnsServer { get; set; }
-    }
-
 }
