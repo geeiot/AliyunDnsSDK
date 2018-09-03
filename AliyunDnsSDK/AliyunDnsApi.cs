@@ -44,11 +44,12 @@ namespace AliyunDnsSDK
                 }
                 else
                 {
+                    T t = JsonHelper.DeserializeJsonToObject<T>(result);
                     if (isSaveLog)
                     {
                         Log.Write("Request successfed!", requestUrl, LogType.Error, MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name);
                     }
-                    return JsonHelper.DeserializeJsonToObject<T>(result);
+                    return t;
                 }
             }
             catch (Exception ex)
