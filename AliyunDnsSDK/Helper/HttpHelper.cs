@@ -25,7 +25,7 @@ namespace AliyunDnsSDK.Helper
     {
         private const int ConnectionLimit = 100;
         //编码
-        private Encoding _encoding = Encoding.Default;
+        private Encoding _encoding = Encoding.UTF8;
         //浏览器类型
         private string[] _useragents = new string[]{
             "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36",
