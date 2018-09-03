@@ -93,6 +93,7 @@
     <Compile Include="Model\Interfaces\IAddDomainRecord.cs" />
     <Compile Include="Model\Interfaces\IChangeDomainOfDnsProduct.cs" />
     <Compile Include="Model\Interfaces\ICheckDomainRecord.cs" />
+    <Compile Include="Model\Interfaces\IDeleteDomainRecord.cs" />
     <Compile Include="Model\Interfaces\IDescribeDnsProductInstances.cs" />
     <Compile Include="Model\Interfaces\IDescribeDomainLogs.cs" />
     <Compile Include="Model\Interfaces\IGetMainDomainName.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="Model\Results\AddDomainResult.cs" />
     <Compile Include="Model\Results\ChangeDomainOfDnsProductResult.cs" />
     <Compile Include="Model\Results\CheckDomainRecordResult.cs" />
+    <Compile Include="Model\Results\DeleteDomainRecordResult.cs" />
     <Compile Include="Model\Results\DeleteDomainResult.cs" />
     <Compile Include="Model\Results\DescribeDnsProductInstancesResult.cs" />
     <Compile Include="Model\Results\DescribeDomainInfoResult.cs" />
