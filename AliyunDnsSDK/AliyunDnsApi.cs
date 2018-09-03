@@ -11,11 +11,21 @@ namespace AliyunDnsSDK
 {
     public class AliyunDnsApi
     {
+        /// <summary>
+        /// 初始化配置文件
+        /// </summary>
         public AliyunDnsApi()
         {
             Config config = new Config();
         }
 
+        /// <summary>
+        /// 请求数据
+        /// </summary>
+        /// <typeparam name="T">返回数据对象</typeparam>
+        /// <param name="obj">请求接口类</param>
+        /// <param name="isSaveLog">是否保存日志</param>
+        /// <returns></returns>
         public T Request<T>(object obj, bool isSaveLog = false) where T : class
         {
             HttpHelper httpHelper = new HttpHelper();
@@ -28,7 +38,7 @@ namespace AliyunDnsSDK
                 {
                     if (isSaveLog)
                     {
-                        Log.Write("请求失败，返回的数据为空！", requestUrl, LogType.Error, MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name);
+                        Log.Write("Request failed, back data is null!", requestUrl, LogType.Error, MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name);
                     }
                     return null;
                 }
@@ -36,7 +46,7 @@ namespace AliyunDnsSDK
                 {
                     if (isSaveLog)
                     {
-                        Log.Write("请求成功！", requestUrl, LogType.Error, MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name);
+                        Log.Write("Request successfed!", requestUrl, LogType.Error, MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name);
                     }
                     return JsonHelper.DeserializeJsonToObject<T>(result);
                 }
@@ -45,7 +55,7 @@ namespace AliyunDnsSDK
             {
                 if (isSaveLog)
                 {
-                    Log.Write($"{ex.Message}", requestUrl, LogType.Error, MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name);
+                    Log.Write(ex.Message, requestUrl, LogType.Error, MethodBase.GetCurrentMethod().DeclaringType.FullName, MethodBase.GetCurrentMethod().Name);
                     return null;
                 }
                 else

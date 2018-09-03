@@ -47,4 +47,9 @@ if (domain != null && domain.Record.Count > 0)
 
 4、目前可用接口
 AddDomain 添加域名
+DeleteDomain 删除域名
+DescribeDomains 获取域名列表
+DescribeDomainInfo 获取域名信息
+IModifyHichinaDomainDNS 修改万网域名DNS
+
 DescribeDomainRecords 获取解析记录列表

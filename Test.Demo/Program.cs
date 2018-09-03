@@ -19,13 +19,13 @@ namespace Test.Demo
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            IDescribeDomainInfo describeDomainRecords = new IDescribeDomainInfo()
+            IModifyHichinaDomainDNS describeDomainRecords = new IModifyHichinaDomainDNS()
             {
                 DomainName = "geeiot.net",
             };
 
             //Get and out result
-            DescribeDomainInfoResult result = request.Request<DescribeDomainInfoResult>(describeDomainRecords, true);
+            ModifyHichinaDomainDNSResult result = request.Request<ModifyHichinaDomainDNSResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");
