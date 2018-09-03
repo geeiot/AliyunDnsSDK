@@ -90,6 +90,7 @@
     <Compile Include="Model\DataType\SLBSubDomainType.cs" />
     <Compile Include="Model\EnumType\ResolveLine.cs" />
     <Compile Include="Model\EnumType\ResolveLogFormat.cs" />
+    <Compile Include="Model\Interfaces\IAddDomainRecord.cs" />
     <Compile Include="Model\Interfaces\IChangeDomainOfDnsProduct.cs" />
     <Compile Include="Model\Interfaces\ICheckDomainRecord.cs" />
     <Compile Include="Model\Interfaces\IDescribeDnsProductInstances.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="Model\Interfaces\IDescribeDomains.cs" />
     <Compile Include="Model\Interfaces\IModifyHichinaDomainDNS.cs" />
     <Compile Include="Model\Interfaces\InterfacePublicParameters.cs" />
+    <Compile Include="Model\Results\AddDomainRecordResult.cs" />
     <Compile Include="Model\Results\AddDomainResult.cs" />
     <Compile Include="Model\Results\ChangeDomainOfDnsProductResult.cs" />
     <Compile Include="Model\Results\CheckDomainRecordResult.cs" />

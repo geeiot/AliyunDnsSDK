@@ -11,7 +11,7 @@ namespace AliyunDnsSDK.Model.EnumType
     /// </summary>
     public enum DefaultResolveLine
     {
-        defaultl, //默认
+        defaultline, //默认
         telecom, // 电信
         unicom,  //  联通
         mobile,  //  移动

@@ -20,16 +20,16 @@ namespace Test.Demo
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            ICheckDomainRecord describeDomainRecords = new ICheckDomainRecord()
+            IAddDomainRecord describeDomainRecords = new IAddDomainRecord()
             {
-                DomainName = "geeiot.net",
-                Type = ResolveLogFormat.A.ToString(),
-                RR = "www",
-                Value = "132.232.22.114"
+                DomainName = "1byte.cn",
+                RR = "test",
+                Type = ResolveLogFormat.A,
+                Value = "192.168.1.100"
             };
 
             //Get and out result
-            CheckDomainRecordResult result = request.Request<CheckDomainRecordResult>(describeDomainRecords, true);
+            AddDomainRecordResult result = request.Request<AddDomainRecordResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");
