@@ -19,17 +19,20 @@ namespace Test.Demo
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            IDescribeDomains describeDomainRecords = new IDescribeDomains();
+            IDescribeDomainInfo describeDomainRecords = new IDescribeDomainInfo()
+            {
+                DomainName = "geeiot.net",
+            };
 
             //Get and out result
-            DescribeDomainsResult result = request.Request<DescribeDomainsResult>(describeDomainRecords, true);
+            DescribeDomainInfoResult result = request.Request<DescribeDomainInfoResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");
             }
             else
             {
-                Console.WriteLine("请求成功！总条数：" + result.TotalCount);
+                Console.WriteLine("请求成功！");
             }
 
             Console.ReadKey(false);
