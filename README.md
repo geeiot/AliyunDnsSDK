@@ -6,7 +6,8 @@
 **如何使用**
 
 1、配置<br />
-在项目Config文件的appSettings节点下面配置以下参数。<br />
+有两种配置方法。<br />
+第一种，在项目Config文件的appSettings节点下面配置以下参数。<br />
 ```csharp
 <appSettings>
     <!--请修改你的AccessKeyId和AccessKeySecret-->
@@ -19,6 +20,10 @@
     <add key="ApiSignatureMethod" value="HMAC-SHA1"/>
     <add key="ApiSignatureVersion" value="1.0"/>
 </appSettings>
+```
+第二种，在构造Api的时候，填写参数AccessKeyId和AccessKeySecret。<br />
+```csharp
+AliyunDnsApi request = new AliyunDnsApi("你的AccessKeyId", "你的AccessKeySecret");
 ```
 
 2、添加相关的模型<br />
@@ -69,3 +74,4 @@ else
 | 9  | IChangeDomainOfDnsProduct  | 更换云解析产品绑定的域名   | 否  | 见官网  |
 | 10  | ICheckDomainRecord  | 检测解析记录是否生效   | 是  | [点此查看](https://help.aliyun.com/document_detail/29770.html?spm=a2c4g.11186623.6.632.57482a2fJsIWI8 "点此查看")  |
 | 9  | IDescribeDomainRecords  | 获取解析记录列表   | 是  | 点此查看 |
+

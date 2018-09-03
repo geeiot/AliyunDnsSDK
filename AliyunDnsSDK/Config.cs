@@ -23,6 +23,12 @@ namespace AliyunDnsSDK
 
         public static string ApiSignatureVersion { get; set; } = "1.0";
 
+        public Config(string accessKeyId, string accessKeySecret)
+        {
+            AccessKeyId = accessKeyId;
+            AccessKeySecret = accessKeySecret;
+        }
+
         public Config()
         {
             try

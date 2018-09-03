@@ -12,11 +12,28 @@ namespace AliyunDnsSDK
     public class AliyunDnsApi
     {
         /// <summary>
-        /// 初始化配置文件
+        /// 初始化配置
         /// </summary>
         public AliyunDnsApi()
         {
             Config config = new Config();
+        }
+
+        /// <summary>
+        /// 初始化配置
+        /// </summary>
+        /// <param name="accessKeyId">你的AccessKeyId</param>
+        /// <param name="accessKeySecret">你的AccessKeySecret</param>
+        public AliyunDnsApi(string accessKeyId,string accessKeySecret)
+        {
+            if (string.IsNullOrEmpty(accessKeyId) || string.IsNullOrEmpty(accessKeySecret))
+            {
+                throw new Exception("AccessKeyId or accessKeySecret can not null.");
+            }
+            else
+            {
+                Config config = new Config(accessKeyId, accessKeySecret);
+            }
         }
 
         /// <summary>
