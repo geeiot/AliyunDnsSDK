@@ -11,6 +11,9 @@ namespace AliyunDnsSDK.Model.Results
     /// </summary>
     public abstract class ResultPublicParameters
     {
+        /// <summary>
+        /// 唯一请求识别码
+        /// </summary>
         public abstract string RequestId { get; set; }
     }
 }

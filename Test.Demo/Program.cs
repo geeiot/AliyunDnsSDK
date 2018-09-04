@@ -22,14 +22,13 @@ namespace Test.Demo
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            IDeleteSubDomainRecords describeDomainRecords = new IDeleteSubDomainRecords()
+            IDescribeRecordLogs describeDomainRecords = new IDescribeRecordLogs()
             {
-                DomainName = "1byte.cn",
-                RR = "www"
+                DomainName = "1byte.cn"
             };
 
             //Get and out result
-            DeleteSubDomainRecordsResult result = request.Request<DeleteSubDomainRecordsResult>(describeDomainRecords, true);
+            DescribeRecordLogsResult result = request.Request<DescribeRecordLogsResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");

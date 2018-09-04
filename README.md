@@ -27,8 +27,8 @@ AliyunDnsApi request = new AliyunDnsApi("你的AccessKeyId", "你的AccessKeySec
 ```
 
 2、添加相关的模型<br />
-项目开发初期，大多数模型未添加，需要哪些模型，自行添加即可。<br />
-请求参数实体存放于Interfaces当中，以字母I开头，必须继承基类InterfacePublicParameters，返回数据实体存放于Results当中，以Result结尾，必须继承基类ResultPublicParameters。
+有些数模型未添加，需要哪些模型，自行添加即可。<br />
+请求参数实体存放于Requests当中，以字母I开头，必须继承基类InterfacePublicParameters，返回数据实体存放于Results当中，以Result结尾，必须继承基类ResultPublicParameters。
 对于Result实体，可以将官方文档提供的JSON格式数据提供下面的工具直接转化为实体模型。工具地址：http://www.bejson.com/convert/json2csharp/ <br />
 
 3、代码使用（Demo）<br />
@@ -80,4 +80,4 @@ else
 | 16  | IDescribeDomainRecordInfo  | 获取解析记录信息   | 是  | [点此查看](https://help.aliyun.com/document_detail/29777.html?spm=a2c4g.11186623.6.639.73114c25AT5ItS "点此查看")|
 | 17  | IDescribeSubDomainRecords   | 获取子域名的解析记录列表   | 是  | [点此查看](https://help.aliyun.com/document_detail/29778.html?spm=a2c4g.11186623.6.640.798347d93OwMQN "点此查看")  |
 | 18  | IDeleteSubDomainRecords  | 删除主机记录对应的解析记录   | 是  | [点此查看](https://help.aliyun.com/document_detail/29779.html?spm=a2c4g.11186623.6.641.55bb5684TOnon4 "点此查看")  |
-
+| 19  | IDescribeRecordLogs  | 获取域名的解析操作日志   | 是  | [点此查看](https://help.aliyun.com/document_detail/29780.html?spm=a2c4g.11186623.6.642.111e2b4bFa4xyX "点此查看")  |

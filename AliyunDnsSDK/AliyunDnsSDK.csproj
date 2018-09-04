@@ -74,6 +74,7 @@
     <Compile Include="Model\EnumType\DomainRecordStatus.cs" />
     <Compile Include="Model\EnumType\ResolveLine.cs" />
     <Compile Include="Model\EnumType\ResolveLogFormat.cs" />
+    <Compile Include="Model\Requests\IDescribeRecordLogs.cs" />
     <Compile Include="Model\Requests\IAddDomainRecord.cs" />
     <Compile Include="Model\Requests\IChangeDomainOfDnsProduct.cs" />
     <Compile Include="Model\Requests\ICheckDomainRecord.cs" />
@@ -106,6 +107,7 @@
     <Compile Include="Model\Results\DescribeDomainRecordInfoResult.cs" />
     <Compile Include="Model\Results\DescribeDomainRecordsResult.cs" />
     <Compile Include="Model\Results\DescribeDomainsResult.cs" />
+    <Compile Include="Model\Results\DescribeRecordLogsResult.cs" />
     <Compile Include="Model\Results\DescribeSubDomainRecordsResult.cs" />
     <Compile Include="Model\Results\GetMainDomainNameResult.cs" />
     <Compile Include="Model\Results\ModifyHichinaDomainDNSResult.cs" />
