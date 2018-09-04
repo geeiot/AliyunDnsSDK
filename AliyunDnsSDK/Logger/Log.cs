@@ -70,7 +70,7 @@ namespace AliyunDnsSDK.Logger
                 }
 
             }
-            catch (Exception ex)
+            catch
             {
 
             }
