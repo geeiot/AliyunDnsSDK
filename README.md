@@ -75,5 +75,6 @@ else
 | 11  | IAddDomainRecord  | 添加解析记录   | 是  | [点此查看](https://help.aliyun.com/document_detail/29772.html?spm=a2c4g.11186623.6.634.1a2c7d8c0ELy4p "点此查看") |
 | 12  | IDeleteDomainRecord  | 删除解析记录   | 是  | [点此查看](https://help.aliyun.com/document_detail/29773.html?spm=a2c4g.11186623.6.635.5cff47d9MTmKi2 "点此查看") |
 | 13  | IUpdateDomainRecord  | 修改解析记录   | 未通过  | [点此查看](https://help.aliyun.com/document_detail/29774.html?spm=a2c4g.11186623.6.636.208f2911qU30OW "点此查看") |
-| 9  | IDescribeDomainRecords  | 获取解析记录列表   | 是  | 点此查看 |
+| 14  | ISetDomainRecordStatus  | 设置解析记录状态   | 是  | [点此查看](https://help.aliyun.com/document_detail/29775.html?spm=a2c4g.11186623.6.637.68ca6e00pErW5k "点此查看") |
+| 15  | IDescribeDomainRecords  | 获取解析记录列表   | 是  | [点此查看](https://help.aliyun.com/document_detail/29776.html?spm=a2c4g.11186623.6.638.79be2911qegwNF "点此查看") |
 

@@ -71,6 +71,7 @@
     <Compile Include="Model\DataType\RecordLogType.cs" />
     <Compile Include="Model\DataType\RecordType.cs" />
     <Compile Include="Model\DataType\SLBSubDomainType.cs" />
+    <Compile Include="Model\EnumType\DomainRecordStatus.cs" />
     <Compile Include="Model\EnumType\ResolveLine.cs" />
     <Compile Include="Model\EnumType\ResolveLogFormat.cs" />
     <Compile Include="Model\Interfaces\IAddDomainRecord.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Model\Interfaces\IDescribeDomains.cs" />
     <Compile Include="Model\Interfaces\IModifyHichinaDomainDNS.cs" />
     <Compile Include="Model\Interfaces\InterfacePublicParameters.cs" />
+    <Compile Include="Model\Interfaces\ISetDomainRecordStatus.cs" />
     <Compile Include="Model\Interfaces\IUpdateDomainRecord.cs" />
     <Compile Include="Model\Results\AddDomainRecordResult.cs" />
     <Compile Include="Model\Results\AddDomainResult.cs" />
@@ -102,6 +104,7 @@
     <Compile Include="Model\Results\GetMainDomainNameResult.cs" />
     <Compile Include="Model\Results\ModifyHichinaDomainDNSResult.cs" />
     <Compile Include="Model\Results\ResultPublicParameters.cs" />
+    <Compile Include="Model\Results\SetDomainRecordStatusResult.cs" />
     <Compile Include="Model\Results\UpdateDomainRecordResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -22,16 +22,14 @@ namespace Test.Demo
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            IUpdateDomainRecord describeDomainRecords = new IUpdateDomainRecord()
+            ISetDomainRecordStatus describeDomainRecords = new ISetDomainRecordStatus()
             {
                 RecordId = "4049313858094080",
-                RR = "lala",
-                Type = ResolveLogFormat.A,
-                Value = "192.168.1.1"
+                Status = DomainRecordStatus.Disable
             };
 
             //Get and out result
-            UpdateDomainRecordResult result = request.Request<UpdateDomainRecordResult>(describeDomainRecords, true);
+            SetDomainRecordStatusResult result = request.Request<SetDomainRecordStatusResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");
