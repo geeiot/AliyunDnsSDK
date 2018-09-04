@@ -16,17 +16,22 @@ namespace Test.Demo
     {
         static void Main(string[] args)
         {
+            GetDescribeDomainRecords();
+            //Console.ReadKey();
             //Init Api
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            IDeleteDomainRecord describeDomainRecords = new IDeleteDomainRecord()
+            IUpdateDomainRecord describeDomainRecords = new IUpdateDomainRecord()
             {
-                RecordId = "4049024350454784",
+                RecordId = "4049313858094080",
+                RR = "lala",
+                Type = ResolveLogFormat.A,
+                Value = "192.168.1.1"
             };
 
             //Get and out result
-            DeleteDomainRecordResult result = request.Request<DeleteDomainRecordResult>(describeDomainRecords, true);
+            UpdateDomainRecordResult result = request.Request<UpdateDomainRecordResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");
@@ -65,6 +70,32 @@ namespace Test.Demo
             else
             {
                 Console.WriteLine("请求失败！");
+            }
+        }
+
+        static void AddDomainRecord()
+        {
+            //Init Api
+            AliyunDnsApi request = new AliyunDnsApi();
+
+            //Init DescribeDomainRecords object
+            IAddDomainRecord describeDomainRecords = new IAddDomainRecord()
+            {
+                DomainName = "1byte.cn",
+                RR = "pppp",
+                Type = ResolveLogFormat.A,
+                Value = "192.168.3.120"
+            };
+
+            AddDomainResult domain = request.Request<AddDomainResult>(describeDomainRecords); //泛型参数为Result实体模型
+
+            if (domain != null)
+            {
+                Console.WriteLine("添加成功！");
+            }
+            else
+            {
+                Console.WriteLine("添加失败！");
             }
         }
     }

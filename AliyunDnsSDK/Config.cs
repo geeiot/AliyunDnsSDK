@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AliyunDnsSDK
 {
-    public class Config
+    internal class Config
     {
         public static string AccessKeyId { get; set; }
 
