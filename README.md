@@ -77,4 +77,6 @@ else
 | 13  | IUpdateDomainRecord  | 修改解析记录   | 未通过  | [点此查看](https://help.aliyun.com/document_detail/29774.html?spm=a2c4g.11186623.6.636.208f2911qU30OW "点此查看") |
 | 14  | ISetDomainRecordStatus  | 设置解析记录状态   | 是  | [点此查看](https://help.aliyun.com/document_detail/29775.html?spm=a2c4g.11186623.6.637.68ca6e00pErW5k "点此查看") |
 | 15  | IDescribeDomainRecords  | 获取解析记录列表   | 是  | [点此查看](https://help.aliyun.com/document_detail/29776.html?spm=a2c4g.11186623.6.638.79be2911qegwNF "点此查看") |
-| 16  | IDescribeDomainRecordInfo  | 获取解析记录信息   | 是  | [点此查看](https://help.aliyun.com/document_detail/29777.html?spm=a2c4g.11186623.6.639.73114c25AT5ItS "点此查看")
+| 16  | IDescribeDomainRecordInfo  | 获取解析记录信息   | 是  | [点此查看](https://help.aliyun.com/document_detail/29777.html?spm=a2c4g.11186623.6.639.73114c25AT5ItS "点此查看")|
+| 17  | IDescribeSubDomainRecords   | 获取子域名的解析记录列表   | 是  | [点此查看](https://help.aliyun.com/document_detail/29778.html?spm=a2c4g.11186623.6.640.798347d93OwMQN "点此查看")  |
+

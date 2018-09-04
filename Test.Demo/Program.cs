@@ -22,13 +22,13 @@ namespace Test.Demo
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            IDescribeDomainRecordInfo describeDomainRecords = new IDescribeDomainRecordInfo()
+            IDescribeSubDomainRecords describeDomainRecords = new IDescribeSubDomainRecords()
             {
-                RecordId = "4049313858094080"
+                SubDomain = "www.1byte.cn",
             };
 
             //Get and out result
-            DescribeDomainRecordInfoResult result = request.Request<DescribeDomainRecordInfoResult>(describeDomainRecords, true);
+            DescribeSubDomainRecordsResult result = request.Request<DescribeSubDomainRecordsResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");
