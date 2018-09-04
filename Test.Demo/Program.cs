@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using AliyunDnsSDK;
 using AliyunDnsSDK.Model.DataType;
 using AliyunDnsSDK.Model.EnumType;
-using AliyunDnsSDK.Model.Interfaces;
+using AliyunDnsSDK.Model.Requests;
 using AliyunDnsSDK.Model.Results;
 
 namespace Test.Demo

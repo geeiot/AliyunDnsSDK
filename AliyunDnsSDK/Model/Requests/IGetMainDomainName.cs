@@ -4,31 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AliyunDnsSDK.Model.Interfaces
+namespace AliyunDnsSDK.Model.Requests
 {
     /// <summary>
-    /// 修改万网域名 DNS
+    /// 获取主域名名称
     /// 更新时间：2017-06-07 13:26:11
-    /// 文档地址：https://help.aliyun.com/document_detail/29754.html?spm=a2c4g.11186623.6.619.11365d77HL5xSB
-    /// 说明：根据传入参数修改域名DNS，只针对当前DNS为第三方的万网域名。 修改成功后，DNS会被修改为万网DNS。
+    /// 文档地址：https://help.aliyun.com/document_detail/29755.html?spm=a2c4g.11186623.6.620.334d12d7SvLObz
+    /// 说明：通过输入的参数，获取主域名名称。关于主域名和子域名级别见域名级别。 如输入的为www.abc.com，则输出abc.com。
     /// </summary>
-    public class IModifyHichinaDomainDNS : InterfacePublicParameters
+    public class IGetMainDomainName : InterfacePublicParameters
     {
         /// <summary>
-        /// 操作接口名，系统规定参数，取值：ModifyHichinaDomainDNS
+        /// 操作接口名，系统规定参数，取值：GetMainDomainName
         /// </summary>
         public string Action
         {
             get
             {
-                return "ModifyHichinaDomainDNS";
+                return "GetMainDomainName";
             }
         }
 
         /// <summary>
-        /// 域名名称
+        /// 字符串，最长不超过128个字符
         /// </summary>
-        public string DomainName { get; set; }
+        public string InputString { get; set; }
 
         //=========================================================================
 

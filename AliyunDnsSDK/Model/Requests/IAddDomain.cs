@@ -4,41 +4,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AliyunDnsSDK.Model.Interfaces
+namespace AliyunDnsSDK.Model.Requests
 {
     /// <summary>
-    /// 获取域名操作日志
+    /// 根据传入参数添加域名。域名合法性判断参见域名合法性。
     /// 更新时间：2017-06-07 13:26:11
-    /// 文档地址：https://help.aliyun.com/document_detail/29756.html?spm=a2c4g.11186623.6.621.70ed22c4C8nHNP
+    /// 文档地址：https://help.aliyun.com/document_detail/29749.html?spm=a2c4g.11186623.6.615.1d7329d9AOyTbB
     /// </summary>
-    public class IDescribeDomainLogs : InterfacePublicParameters
+    public class IAddDomain : InterfacePublicParameters
     {
         /// <summary>
-        /// 操作接口名，系统规定参数，取值：DescribeDomainLogs
+        /// 操作接口名，系统规定参数，取值：AddDomain（必须）
         /// </summary>
         public string Action
         {
             get
             {
-                return "DescribeDomainLogs";
+                return "AddDomain";
             }
         }
 
         /// <summary>
-        /// 当前页数，起始值为1，默认为1
+        /// 域名名称（必须）
         /// </summary>
-        public long? PageNumber { get; set; }
+        public string DomainName { get; set; }
 
         /// <summary>
-        /// 分页查询时设置的每页行数，最大值100，默认为20
+        /// 域名分组，默认为“默认分组”的GroupId
         /// </summary>
-        public long? PageSize { get; set; }
-
-        /// <summary>
-        /// 关键字，按照”%KeyWord%”模式搜索，不区分大小写
-        /// </summary>
-        public string KeyWord { get; set; }
-
+        public string GroupId { get; set; }
 
         //=========================================================================
 

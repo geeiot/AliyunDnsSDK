@@ -1,49 +1,41 @@
-﻿using System;
+﻿using AliyunDnsSDK.Model.EnumType;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AliyunDnsSDK.Model.Interfaces
+namespace AliyunDnsSDK.Model.Requests
 {
     /// <summary>
-    /// 获取域名列表
+    /// 设置解析记录状态
     /// 更新时间：2017-06-07 13:26:11
-    /// 文档地址：https://help.aliyun.com/document_detail/29751.html?spm=a2c4g.11186623.6.617.6b4c29d9u2ati7
+    /// 文档地址：https://help.aliyun.com/document_detail/29775.html?spm=a2c4g.11186623.6.637.68ca6e00pErW5k
     /// </summary>
-    public class IDescribeDomains : InterfacePublicParameters
+    public class ISetDomainRecordStatus : InterfacePublicParameters
     {
         /// <summary>
-        /// 操作接口名，系统规定参数，取值：DescribeDomains
+        /// 操作接口名，系统规定参数，取值：SetDomainRecordStatus
         /// </summary>
         public string Action
         {
             get
             {
-                return "DescribeDomains";
+                return "SetDomainRecordStatus";
             }
         }
 
         /// <summary>
-        /// 当前页数，起始值为1，默认为1
+        /// 解析记录的ID，此参数在添加解析时会返回，在获取域名解析列表时会返回（必须）
         /// </summary>
-        public long? PageNumber { get; set; }
+        public string RecordId { get; set; }
+
+        private string _Status { get; set; }
 
         /// <summary>
-        /// 分页查询时设置的每页行数，最大值100，默认为20
+        /// Enable: 启用解析 Disable: 暂停解析(必须)
         /// </summary>
-        public long? PageSize { get; set; }
-
-        /// <summary>
-        /// 关键字，按照”%KeyWord%”模式搜索，不区分大小写
-        /// </summary>
-        public string KeyWord { get; set; }
-
-        /// <summary>
-        /// 域名分组ID，如果不填写则默认为全部分组
-        /// </summary>
-        public string GroupId { get; set; }
-
+        public DomainRecordStatus Status { get; set; }
 
         //=========================================================================
 

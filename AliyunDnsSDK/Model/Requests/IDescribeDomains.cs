@@ -4,30 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AliyunDnsSDK.Model.Interfaces
+namespace AliyunDnsSDK.Model.Requests
 {
     /// <summary>
-    /// 获取解析记录列表
+    /// 获取域名列表
     /// 更新时间：2017-06-07 13:26:11
-    /// 文档地址：https://help.aliyun.com/document_detail/29776.html?spm=a2c4g.11186623.6.638.23c21ba8FHVAdQ
+    /// 文档地址：https://help.aliyun.com/document_detail/29751.html?spm=a2c4g.11186623.6.617.6b4c29d9u2ati7
     /// </summary>
-    public class IDescribeDomainRecords : InterfacePublicParameters
+    public class IDescribeDomains : InterfacePublicParameters
     {
         /// <summary>
-        /// 操作接口名，系统规定参数，取值：DescribeDomainRecords （必须）
+        /// 操作接口名，系统规定参数，取值：DescribeDomains
         /// </summary>
         public string Action
         {
             get
             {
-                return "DescribeDomainRecords";
+                return "DescribeDomains";
             }
         }
-
-        /// <summary>
-        /// 域名名称 （必须）
-        /// </summary>
-        public string DomainName { get; set; }
 
         /// <summary>
         /// 当前页数，起始值为1，默认为1
@@ -35,25 +30,20 @@ namespace AliyunDnsSDK.Model.Interfaces
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// 分页查询时设置的每页行数，最大值500，默认为20
+        /// 分页查询时设置的每页行数，最大值100，默认为20
         /// </summary>
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// 主机记录的关键字，按照”%RRKeyWord%”模式搜索，不区分大小写
+        /// 关键字，按照”%KeyWord%”模式搜索，不区分大小写
         /// </summary>
-
-        public string RRKeyWord { get; set; }
-
-        /// <summary>
-        /// 解析类型的关键字，按照全匹配搜索，不区分大小写
-        /// </summary>
-        public string TypeKeyWord { get; set; }
+        public string KeyWord { get; set; }
 
         /// <summary>
-        /// 记录值的关键字，按照”%ValueKeyWord%”模式搜索，不区分大小写
+        /// 域名分组ID，如果不填写则默认为全部分组
         /// </summary>
-        public string ValueKeyWord { get; set; }
+        public string GroupId { get; set; }
+
 
         //=========================================================================
 
@@ -72,6 +62,5 @@ namespace AliyunDnsSDK.Model.Interfaces
         public override string SignatureVersion { get; set; }
 
         public override string SignatureNonce { get; set; }
-
     }
 }

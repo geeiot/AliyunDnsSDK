@@ -4,35 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AliyunDnsSDK.Model.Interfaces
+namespace AliyunDnsSDK.Model.Requests
 {
     /// <summary>
-    /// 获取云解析收费版本产品列表
+    /// 根据传入参数删除域名。 由于万网域名的特殊性，因此在DNS API中禁止删除万网域名。 不存在的域名情况包括，此域名是未注册的域名、该域名在本账户下不存在或者请求参数中的域名格式错误等。
     /// 更新时间：2017-06-07 13:26:11
-    /// 文档地址：https://help.aliyun.com/document_detail/29758.html?spm=a2c4g.11186623.6.623.646d4c7bNk1yie
+    /// 文档地址：https://help.aliyun.com/document_detail/29750.html?spm=a2c4g.11186623.6.616.66d91ba8XRI3A0
     /// </summary>
-    public class IDescribeDnsProductInstances : InterfacePublicParameters
+    public class IDeleteDomain : InterfacePublicParameters
     {
         /// <summary>
-        /// 操作接口名，系统规定参数，取值：DescribeDnsProductInstances
+        /// 操作接口名，系统规定参数，取值：DeleteDomain（必填）
         /// </summary>
         public string Action
         {
             get
             {
-                return "DescribeDnsProductInstances";
+                return "DeleteDomain";
             }
         }
 
         /// <summary>
-        /// 当前页数，起始值为1，默认为1
+        /// 域名名称（必填）
         /// </summary>
-        public long? PageNumber { get; set; }
-
-        /// <summary>
-        /// 分页查询时设置的每页行数，最大值100，默认为20
-        /// </summary>
-        public long? PageSize { get; set; }
+        public string DomainName { get; set; }
 
         //=========================================================================
 
@@ -51,5 +46,6 @@ namespace AliyunDnsSDK.Model.Interfaces
         public override string SignatureVersion { get; set; }
 
         public override string SignatureNonce { get; set; }
+
     }
 }

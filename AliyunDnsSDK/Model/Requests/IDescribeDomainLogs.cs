@@ -4,30 +4,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AliyunDnsSDK.Model.Interfaces
+namespace AliyunDnsSDK.Model.Requests
 {
     /// <summary>
-    /// 删除解析记录
+    /// 获取域名操作日志
     /// 更新时间：2017-06-07 13:26:11
-    /// 文档地址：https://help.aliyun.com/document_detail/29773.html?spm=a2c4g.11186623.6.635.76b27d8cQvxz0i
+    /// 文档地址：https://help.aliyun.com/document_detail/29756.html?spm=a2c4g.11186623.6.621.70ed22c4C8nHNP
     /// </summary>
-    public class IDeleteDomainRecord : InterfacePublicParameters
+    public class IDescribeDomainLogs : InterfacePublicParameters
     {
         /// <summary>
-        /// 操作接口名，系统规定参数，取值：DeleteDomainRecord
+        /// 操作接口名，系统规定参数，取值：DescribeDomainLogs
         /// </summary>
         public string Action
         {
             get
             {
-                return "DeleteDomainRecord";
+                return "DescribeDomainLogs";
             }
         }
 
         /// <summary>
-        /// 解析记录的ID，此参数在添加解析时会返回，在获取域名解析列表时会返回
+        /// 当前页数，起始值为1，默认为1
         /// </summary>
-        public string RecordId { get; set; }
+        public long? PageNumber { get; set; }
+
+        /// <summary>
+        /// 分页查询时设置的每页行数，最大值100，默认为20
+        /// </summary>
+        public long? PageSize { get; set; }
+
+        /// <summary>
+        /// 关键字，按照”%KeyWord%”模式搜索，不区分大小写
+        /// </summary>
+        public string KeyWord { get; set; }
+
 
         //=========================================================================
 

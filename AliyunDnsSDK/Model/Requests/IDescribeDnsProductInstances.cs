@@ -1,41 +1,38 @@
-﻿using AliyunDnsSDK.Model.EnumType;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AliyunDnsSDK.Model.Interfaces
+namespace AliyunDnsSDK.Model.Requests
 {
     /// <summary>
-    /// 设置解析记录状态
+    /// 获取云解析收费版本产品列表
     /// 更新时间：2017-06-07 13:26:11
-    /// 文档地址：https://help.aliyun.com/document_detail/29775.html?spm=a2c4g.11186623.6.637.68ca6e00pErW5k
+    /// 文档地址：https://help.aliyun.com/document_detail/29758.html?spm=a2c4g.11186623.6.623.646d4c7bNk1yie
     /// </summary>
-    public class ISetDomainRecordStatus : InterfacePublicParameters
+    public class IDescribeDnsProductInstances : InterfacePublicParameters
     {
         /// <summary>
-        /// 操作接口名，系统规定参数，取值：SetDomainRecordStatus
+        /// 操作接口名，系统规定参数，取值：DescribeDnsProductInstances
         /// </summary>
         public string Action
         {
             get
             {
-                return "SetDomainRecordStatus";
+                return "DescribeDnsProductInstances";
             }
         }
 
         /// <summary>
-        /// 解析记录的ID，此参数在添加解析时会返回，在获取域名解析列表时会返回（必须）
+        /// 当前页数，起始值为1，默认为1
         /// </summary>
-        public string RecordId { get; set; }
-
-        private string _Status { get; set; }
+        public long? PageNumber { get; set; }
 
         /// <summary>
-        /// Enable: 启用解析 Disable: 暂停解析(必须)
+        /// 分页查询时设置的每页行数，最大值100，默认为20
         /// </summary>
-        public DomainRecordStatus Status { get; set; }
+        public long? PageSize { get; set; }
 
         //=========================================================================
 

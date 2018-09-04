@@ -4,35 +4,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AliyunDnsSDK.Model.Interfaces
+namespace AliyunDnsSDK.Model.Requests
 {
     /// <summary>
-    /// 根据传入参数添加域名。域名合法性判断参见域名合法性。
+    /// 检测解析记录是否生效
     /// 更新时间：2017-06-07 13:26:11
-    /// 文档地址：https://help.aliyun.com/document_detail/29749.html?spm=a2c4g.11186623.6.615.1d7329d9AOyTbB
+    /// 文档地址：https://help.aliyun.com/document_detail/29770.html?spm=a2c4g.11186623.6.632.57482a2fJsIWI8
     /// </summary>
-    public class IAddDomain : InterfacePublicParameters
+    public class ICheckDomainRecord  : InterfacePublicParameters
     {
         /// <summary>
-        /// 操作接口名，系统规定参数，取值：AddDomain（必须）
+        /// 操作接口名，系统规定参数，取值：CheckDomainRecord
         /// </summary>
         public string Action
         {
             get
             {
-                return "AddDomain";
+                return "CheckDomainRecord";
             }
         }
 
         /// <summary>
-        /// 域名名称（必须）
+        /// 域名名称
         /// </summary>
         public string DomainName { get; set; }
 
         /// <summary>
-        /// 域名分组，默认为“默认分组”的GroupId
+        /// 记录类型
         /// </summary>
-        public string GroupId { get; set; }
+        public string Type { get; set; }
+
+        /// <summary>
+        /// 主机记录
+        /// </summary>
+        public string RR { get; set; }
+
+        /// <summary>
+        /// 记录值
+        /// </summary>
+        public string Value { get; set; }
+
 
         //=========================================================================
 
