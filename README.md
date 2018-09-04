@@ -79,4 +79,5 @@ else
 | 15  | IDescribeDomainRecords  | 获取解析记录列表   | 是  | [点此查看](https://help.aliyun.com/document_detail/29776.html?spm=a2c4g.11186623.6.638.79be2911qegwNF "点此查看") |
 | 16  | IDescribeDomainRecordInfo  | 获取解析记录信息   | 是  | [点此查看](https://help.aliyun.com/document_detail/29777.html?spm=a2c4g.11186623.6.639.73114c25AT5ItS "点此查看")|
 | 17  | IDescribeSubDomainRecords   | 获取子域名的解析记录列表   | 是  | [点此查看](https://help.aliyun.com/document_detail/29778.html?spm=a2c4g.11186623.6.640.798347d93OwMQN "点此查看")  |
+| 18  | IDeleteSubDomainRecords  | 删除主机记录对应的解析记录   | 是  | [点此查看](https://help.aliyun.com/document_detail/29779.html?spm=a2c4g.11186623.6.641.55bb5684TOnon4 "点此查看")  |
 
