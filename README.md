@@ -43,7 +43,7 @@ IDescribeDomainRecords describeDomainRecords = new IDescribeDomainRecords()
 };
 
 //获取和输出数据
-DomainRecords domain = request.Request<DescribeDomainRecordsResult>(describeDomainRecords).DomainRecords; //泛型参数为Result实体模型
+DomainRecords domain =  request.Request<DescribeDomainRecordsResult>(describeDomainRecords).DomainRecords; //泛型参数为Result实体模型
 if (domain != null && domain.Record.Count > 0)
 {
     foreach (var item in domain.Record)
@@ -77,4 +77,4 @@ else
 | 13  | IUpdateDomainRecord  | 修改解析记录   | 未通过  | [点此查看](https://help.aliyun.com/document_detail/29774.html?spm=a2c4g.11186623.6.636.208f2911qU30OW "点此查看") |
 | 14  | ISetDomainRecordStatus  | 设置解析记录状态   | 是  | [点此查看](https://help.aliyun.com/document_detail/29775.html?spm=a2c4g.11186623.6.637.68ca6e00pErW5k "点此查看") |
 | 15  | IDescribeDomainRecords  | 获取解析记录列表   | 是  | [点此查看](https://help.aliyun.com/document_detail/29776.html?spm=a2c4g.11186623.6.638.79be2911qegwNF "点此查看") |
-
+| 16  | IDescribeDomainRecordInfo  | 获取解析记录信息   | 是  | [点此查看](https://help.aliyun.com/document_detail/29777.html?spm=a2c4g.11186623.6.639.73114c25AT5ItS "点此查看")

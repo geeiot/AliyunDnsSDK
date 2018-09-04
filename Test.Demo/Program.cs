@@ -22,14 +22,13 @@ namespace Test.Demo
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            ISetDomainRecordStatus describeDomainRecords = new ISetDomainRecordStatus()
+            IDescribeDomainRecordInfo describeDomainRecords = new IDescribeDomainRecordInfo()
             {
-                RecordId = "4049313858094080",
-                Status = DomainRecordStatus.Disable
+                RecordId = "4049313858094080"
             };
 
             //Get and out result
-            SetDomainRecordStatusResult result = request.Request<SetDomainRecordStatusResult>(describeDomainRecords, true);
+            DescribeDomainRecordInfoResult result = request.Request<DescribeDomainRecordInfoResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");

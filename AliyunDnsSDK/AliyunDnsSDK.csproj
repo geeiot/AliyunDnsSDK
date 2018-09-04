@@ -80,6 +80,7 @@
     <Compile Include="Model\Requests\IDeleteDomainRecord.cs" />
     <Compile Include="Model\Requests\IDescribeDnsProductInstances.cs" />
     <Compile Include="Model\Requests\IDescribeDomainLogs.cs" />
+    <Compile Include="Model\Requests\IDescribeDomainRecordInfo.cs" />
     <Compile Include="Model\Requests\IGetMainDomainName.cs" />
     <Compile Include="Model\Requests\IAddDomain.cs" />
     <Compile Include="Model\Requests\IDeleteDomain.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Model\Results\DescribeDnsProductInstancesResult.cs" />
     <Compile Include="Model\Results\DescribeDomainInfoResult.cs" />
     <Compile Include="Model\Results\DescribeDomainLogsResult.cs" />
+    <Compile Include="Model\Results\DescribeDomainRecordInfoResult.cs" />
     <Compile Include="Model\Results\DescribeDomainRecordsResult.cs" />
     <Compile Include="Model\Results\DescribeDomainsResult.cs" />
     <Compile Include="Model\Results\GetMainDomainNameResult.cs" />
