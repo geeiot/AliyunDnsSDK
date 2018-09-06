@@ -47,7 +47,7 @@ namespace Test.Demo
             //Init DescribeDomainRecords object
             IDescribeDomainRecords describeDomainRecords = new IDescribeDomainRecords()
             {
-                DomainName = "1byte.cn",
+                DomainName = "quarkbook.com",
             };
 
             //Get and out result
@@ -77,7 +77,7 @@ namespace Test.Demo
             //Init DescribeDomainRecords object
             IAddDomainRecord describeDomainRecords = new IAddDomainRecord()
             {
-                DomainName = "1byte.cn",
+                DomainName = "quarkbook.com",
                 RR = "yr",
                 Type = ResolveLogFormat.A,
                 Value = "1.1.1.1"
