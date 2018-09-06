@@ -17,18 +17,19 @@ namespace Test.Demo
         static void Main(string[] args)
         {
             GetDescribeDomainRecords();
-            ShowDomainGroup();
+            ShowDomainGroup();  //c291db4a-cc3e-4276-b6dc-4e6c3f881286
             //Init Api
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            IDescribeDomainGroups describeDomainRecords = new IDescribeDomainGroups()
+            IUpdateDomainGroup describeDomainRecords = new IUpdateDomainGroup()
             {
-                
+                GroupId = "c291db4a-cc3e-4276-b6dc-4e6c3f881286",
+                GroupName = "测试"
             };
 
             //Get and out result
-            DescribeDomainGroupsResult result = request.Request<DescribeDomainGroupsResult>(describeDomainRecords, true);
+            UpdateDomainGroupResult result = request.Request<UpdateDomainGroupResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");

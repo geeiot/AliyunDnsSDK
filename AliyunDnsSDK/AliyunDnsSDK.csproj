@@ -98,6 +98,7 @@
     <Compile Include="Model\Requests\ISetDNSSLBStatus.cs" />
     <Compile Include="Model\Requests\ISetDomainRecordStatus.cs" />
     <Compile Include="Model\Requests\IUpdateDNSSLBWeight.cs" />
+    <Compile Include="Model\Requests\IUpdateDomainGroup.cs" />
     <Compile Include="Model\Requests\IUpdateDomainRecord.cs" />
     <Compile Include="Model\Results\AddDomainGroupResult.cs" />
     <Compile Include="Model\Results\AddDomainRecordResult.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="Model\Results\SetDNSSLBStatusResult.cs" />
     <Compile Include="Model\Results\SetDomainRecordStatusResult.cs" />
     <Compile Include="Model\Results\UpdateDNSSLBWeightResult.cs" />
+    <Compile Include="Model\Results\UpdateDomainGroupResult.cs" />
     <Compile Include="Model\Results\UpdateDomainRecordResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
