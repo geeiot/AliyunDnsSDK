@@ -21,14 +21,13 @@ namespace Test.Demo
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            IUpdateDNSSLBWeight describeDomainRecords = new IUpdateDNSSLBWeight()
+            IAddDomainGroup describeDomainRecords = new IAddDomainGroup()
             {
-                RecordId = "4049313858094080",
-                Weight = 10,
+                GroupName = "出售"
             };
 
             //Get and out result
-            UpdateDNSSLBWeightResult result = request.Request<UpdateDNSSLBWeightResult>(describeDomainRecords, true);
+            AddDomainGroupResult result = request.Request<AddDomainGroupResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");
@@ -94,6 +93,11 @@ namespace Test.Demo
             {
                 Console.WriteLine("添加失败！");
             }
+        }
+
+        static void ShowDomainGroup()
+        {
+
         }
     }
 }

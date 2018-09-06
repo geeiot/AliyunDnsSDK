@@ -74,6 +74,7 @@
     <Compile Include="Model\EnumType\DomainRecordStatus.cs" />
     <Compile Include="Model\EnumType\ResolveLine.cs" />
     <Compile Include="Model\EnumType\ResolveLogFormat.cs" />
+    <Compile Include="Model\Requests\IAddDomainGroup.cs" />
     <Compile Include="Model\Requests\IDescribeDNSSLBSubDomains.cs" />
     <Compile Include="Model\Requests\IDescribeRecordLogs.cs" />
     <Compile Include="Model\Requests\IAddDomainRecord.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Model\Requests\ISetDomainRecordStatus.cs" />
     <Compile Include="Model\Requests\IUpdateDNSSLBWeight.cs" />
     <Compile Include="Model\Requests\IUpdateDomainRecord.cs" />
+    <Compile Include="Model\Results\AddDomainGroupResult.cs" />
     <Compile Include="Model\Results\AddDomainRecordResult.cs" />
     <Compile Include="Model\Results\AddDomainResult.cs" />
     <Compile Include="Model\Results\ChangeDomainOfDnsProductResult.cs" />
