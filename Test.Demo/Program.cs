@@ -21,14 +21,14 @@ namespace Test.Demo
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            ISetDNSSLBStatus describeDomainRecords = new ISetDNSSLBStatus()
+            IUpdateDNSSLBWeight describeDomainRecords = new IUpdateDNSSLBWeight()
             {
-                SubDomain = "xx.1byte.cn",
-                Open = false
+                RecordId = "4049313858094080",
+                Weight = 10,
             };
 
             //Get and out result
-            SetDNSSLBStatusResult result = request.Request<SetDNSSLBStatusResult>(describeDomainRecords, true);
+            UpdateDNSSLBWeightResult result = request.Request<UpdateDNSSLBWeightResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");

@@ -74,6 +74,7 @@
     <Compile Include="Model\EnumType\DomainRecordStatus.cs" />
     <Compile Include="Model\EnumType\ResolveLine.cs" />
     <Compile Include="Model\EnumType\ResolveLogFormat.cs" />
+    <Compile Include="Model\Requests\IDescribeDNSSLBSubDomains.cs" />
     <Compile Include="Model\Requests\IDescribeRecordLogs.cs" />
     <Compile Include="Model\Requests\IAddDomainRecord.cs" />
     <Compile Include="Model\Requests\IChangeDomainOfDnsProduct.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Model\Requests\InterfacePublicParameters.cs" />
     <Compile Include="Model\Requests\ISetDNSSLBStatus.cs" />
     <Compile Include="Model\Requests\ISetDomainRecordStatus.cs" />
+    <Compile Include="Model\Requests\IUpdateDNSSLBWeight.cs" />
     <Compile Include="Model\Requests\IUpdateDomainRecord.cs" />
     <Compile Include="Model\Results\AddDomainRecordResult.cs" />
     <Compile Include="Model\Results\AddDomainResult.cs" />
@@ -103,6 +105,7 @@
     <Compile Include="Model\Results\DeleteDomainResult.cs" />
     <Compile Include="Model\Results\DeleteSubDomainRecordsResult.cs" />
     <Compile Include="Model\Results\DescribeDnsProductInstancesResult.cs" />
+    <Compile Include="Model\Results\DescribeDNSSLBSubDomainsResult.cs" />
     <Compile Include="Model\Results\DescribeDomainInfoResult.cs" />
     <Compile Include="Model\Results\DescribeDomainLogsResult.cs" />
     <Compile Include="Model\Results\DescribeDomainRecordInfoResult.cs" />
@@ -115,6 +118,7 @@
     <Compile Include="Model\Results\ResultPublicParameters.cs" />
     <Compile Include="Model\Results\SetDNSSLBStatusResult.cs" />
     <Compile Include="Model\Results\SetDomainRecordStatusResult.cs" />
+    <Compile Include="Model\Results\UpdateDNSSLBWeightResult.cs" />
     <Compile Include="Model\Results\UpdateDomainRecordResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
