@@ -16,33 +16,30 @@ namespace Test.Demo
     {
         static void Main(string[] args)
         {
-            GetDescribeDomainRecords();
-            ShowDomainGroup();  //c291db4a-cc3e-4276-b6dc-4e6c3f881286
             //Init Api
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            IUpdateDomainGroup describeDomainRecords = new IUpdateDomainGroup()
+            IDeleteDomainGroup describeDomainRecords = new IDeleteDomainGroup()
             {
-                GroupId = "c291db4a-cc3e-4276-b6dc-4e6c3f881286",
-                GroupName = "测试"
+                GroupId = "c501e1f2-991e-4673-be49-da9fd1c920f5"
             };
 
             //Get and out result
-            UpdateDomainGroupResult result = request.Request<UpdateDomainGroupResult>(describeDomainRecords, true);
+            DeleteDomainGroupResult result = request.Request<DeleteDomainGroupResult>(describeDomainRecords, true);
             if (result == null)
             {
-                Console.WriteLine("请求失败！");
+                Console.WriteLine("删除失败！");
             }
             else
             {
-                Console.WriteLine("请求成功！");
+                Console.WriteLine("删除成功！");
             }
 
             Console.ReadKey(false);
         }
 
-        static void GetDescribeDomainRecords()
+        static void ShowDescribeDomainRecordsList()
         {
             //Init Api
             AliyunDnsApi request = new AliyunDnsApi();

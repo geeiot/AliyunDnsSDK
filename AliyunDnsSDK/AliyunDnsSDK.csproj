@@ -75,6 +75,8 @@
     <Compile Include="Model\EnumType\ResolveLine.cs" />
     <Compile Include="Model\EnumType\ResolveLogFormat.cs" />
     <Compile Include="Model\Requests\IAddDomainGroup.cs" />
+    <Compile Include="Model\Requests\IChangeDomainGroup.cs" />
+    <Compile Include="Model\Requests\IDeleteDomainGroup.cs" />
     <Compile Include="Model\Requests\IDescribeDNSSLBSubDomains.cs" />
     <Compile Include="Model\Requests\IDescribeDomainGroups.cs" />
     <Compile Include="Model\Requests\IDescribeRecordLogs.cs" />
@@ -103,8 +105,10 @@
     <Compile Include="Model\Results\AddDomainGroupResult.cs" />
     <Compile Include="Model\Results\AddDomainRecordResult.cs" />
     <Compile Include="Model\Results\AddDomainResult.cs" />
+    <Compile Include="Model\Results\ChangeDomainGroupResult.cs" />
     <Compile Include="Model\Results\ChangeDomainOfDnsProductResult.cs" />
     <Compile Include="Model\Results\CheckDomainRecordResult.cs" />
+    <Compile Include="Model\Results\DeleteDomainGroupResult.cs" />
     <Compile Include="Model\Results\DeleteDomainRecordResult.cs" />
     <Compile Include="Model\Results\DeleteDomainResult.cs" />
     <Compile Include="Model\Results\DeleteSubDomainRecordsResult.cs" />
