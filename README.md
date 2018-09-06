@@ -5,9 +5,11 @@
 
 **如何使用**
 
+提示：此SDK依赖于Newtonsoft.Json，请在Nuget中添加Newtonsoft.Json依赖。
+
 1、配置<br />
 有两种配置方法。<br />
-第一种，在项目Config文件的appSettings节点下面配置以下参数。<br />
+第一种，在项目Config文件的appSettings节点下面配置以下参数。（此方式不支持.NET Core）<br />
 ```csharp
 <appSettings>
     <!--请修改你的AccessKeyId和AccessKeySecret-->
