@@ -17,17 +17,18 @@ namespace Test.Demo
         static void Main(string[] args)
         {
             GetDescribeDomainRecords();
+            ShowDomainGroup();
             //Init Api
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            IAddDomainGroup describeDomainRecords = new IAddDomainGroup()
+            IDescribeDomainGroups describeDomainRecords = new IDescribeDomainGroups()
             {
-                GroupName = "出售"
+                
             };
 
             //Get and out result
-            AddDomainGroupResult result = request.Request<AddDomainGroupResult>(describeDomainRecords, true);
+            DescribeDomainGroupsResult result = request.Request<DescribeDomainGroupsResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");
@@ -67,6 +68,7 @@ namespace Test.Demo
             {
                 Console.WriteLine("请求失败！");
             }
+            Console.WriteLine();
         }
 
         static void AddDomainRecord()
@@ -97,7 +99,26 @@ namespace Test.Demo
 
         static void ShowDomainGroup()
         {
+            //Init Api
+            AliyunDnsApi request = new AliyunDnsApi();
 
+            //Init DescribeDomainRecords object
+            IDescribeDomainGroups describeDomainRecords = new IDescribeDomainGroups();
+
+            DescribeDomainGroupsResult domain = request.Request<DescribeDomainGroupsResult>(describeDomainRecords); //泛型参数为Result实体模型
+
+            if (domain != null)
+            {
+                foreach(var item in domain.DomainGroups.DomainGroup)
+                {
+                    Console.WriteLine($"分组ID：{item.GroupId}\t分组名称：{item.GroupName}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("获取域名分组列表失败！");
+            }
+            Console.WriteLine();
         }
     }
 }
