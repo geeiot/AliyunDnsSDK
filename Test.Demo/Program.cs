@@ -17,18 +17,18 @@ namespace Test.Demo
         static void Main(string[] args)
         {
             GetDescribeDomainRecords();
-            //Console.ReadKey();
             //Init Api
             AliyunDnsApi request = new AliyunDnsApi();
 
             //Init DescribeDomainRecords object
-            IDescribeRecordLogs describeDomainRecords = new IDescribeRecordLogs()
+            ISetDNSSLBStatus describeDomainRecords = new ISetDNSSLBStatus()
             {
-                DomainName = "1byte.cn"
+                SubDomain = "xx.1byte.cn",
+                Open = false
             };
 
             //Get and out result
-            DescribeRecordLogsResult result = request.Request<DescribeRecordLogsResult>(describeDomainRecords, true);
+            SetDNSSLBStatusResult result = request.Request<SetDNSSLBStatusResult>(describeDomainRecords, true);
             if (result == null)
             {
                 Console.WriteLine("请求失败！");
@@ -79,9 +79,9 @@ namespace Test.Demo
             IAddDomainRecord describeDomainRecords = new IAddDomainRecord()
             {
                 DomainName = "1byte.cn",
-                RR = "pppp",
+                RR = "yr",
                 Type = ResolveLogFormat.A,
-                Value = "192.168.3.120"
+                Value = "1.1.1.1"
             };
 
             AddDomainResult domain = request.Request<AddDomainResult>(describeDomainRecords); //泛型参数为Result实体模型

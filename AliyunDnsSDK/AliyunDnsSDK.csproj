@@ -92,6 +92,7 @@
     <Compile Include="Model\Requests\IDescribeDomains.cs" />
     <Compile Include="Model\Requests\IModifyHichinaDomainDNS.cs" />
     <Compile Include="Model\Requests\InterfacePublicParameters.cs" />
+    <Compile Include="Model\Requests\ISetDNSSLBStatus.cs" />
     <Compile Include="Model\Requests\ISetDomainRecordStatus.cs" />
     <Compile Include="Model\Requests\IUpdateDomainRecord.cs" />
     <Compile Include="Model\Results\AddDomainRecordResult.cs" />
@@ -112,6 +113,7 @@
     <Compile Include="Model\Results\GetMainDomainNameResult.cs" />
     <Compile Include="Model\Results\ModifyHichinaDomainDNSResult.cs" />
     <Compile Include="Model\Results\ResultPublicParameters.cs" />
+    <Compile Include="Model\Results\SetDNSSLBStatusResult.cs" />
     <Compile Include="Model\Results\SetDomainRecordStatusResult.cs" />
     <Compile Include="Model\Results\UpdateDomainRecordResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

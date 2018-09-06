@@ -33,23 +33,5 @@ namespace AliyunDnsSDK.Model.Requests
         /// 分页查询时设置的每页行数，最大值100，默认为20
         /// </summary>
         public long? PageSize { get; set; }
-
-        //=========================================================================
-
-        public override string Format { get; set; }
-
-        public override string Version { get; set; }
-
-        public override string AccessKeyId { get; set; }
-
-        public override string Signature { get; set; }
-
-        public override string SignatureMethod { get; set; }
-
-        public override string Timestamp { get; set; }
-
-        public override string SignatureVersion { get; set; }
-
-        public override string SignatureNonce { get; set; }
     }
 }

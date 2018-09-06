@@ -17,9 +17,5 @@ namespace AliyunDnsSDK.Model.Results
         /// 解析记录的ID
         /// </summary>
         public string RecordId { get; set; }
-
-        //========================================================
-
-        public override string RequestId { get; set; }
     }
 }

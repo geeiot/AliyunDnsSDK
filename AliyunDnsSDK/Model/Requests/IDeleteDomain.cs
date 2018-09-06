@@ -29,23 +29,5 @@ namespace AliyunDnsSDK.Model.Requests
         /// </summary>
         public string DomainName { get; set; }
 
-        //=========================================================================
-
-        public override string Format { get; set; }
-
-        public override string Version { get; set; }
-
-        public override string AccessKeyId { get; set; }
-
-        public override string Signature { get; set; }
-
-        public override string SignatureMethod { get; set; }
-
-        public override string Timestamp { get; set; }
-
-        public override string SignatureVersion { get; set; }
-
-        public override string SignatureNonce { get; set; }
-
     }
 }

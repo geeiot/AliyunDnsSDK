@@ -35,10 +35,6 @@ namespace AliyunDnsSDK.Model.Results
         /// 解析记录列表
         /// </summary>
         public DomainRecords DomainRecords { get; set; }
-
-        //========================================================
-
-        public override string RequestId { get; set; }
     }
 
     public class DomainRecords

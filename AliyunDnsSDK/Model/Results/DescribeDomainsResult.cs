@@ -34,10 +34,6 @@ namespace AliyunDnsSDK.Model.Results
         /// </summary>
         public Domains Domains { get; set; }
 
-        //========================================================
-
-        public override string RequestId { get; set; }
-
     }
 
     public class Domains

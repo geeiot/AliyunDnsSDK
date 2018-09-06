@@ -29,10 +29,6 @@ namespace AliyunDnsSDK.Model.Results
         /// </summary>
         public DomainLogs DomainLogs { get; set; }
 
-        //========================================================
-
-        public override string RequestId { get; set; }
-
     }
 
     public class DomainLogs

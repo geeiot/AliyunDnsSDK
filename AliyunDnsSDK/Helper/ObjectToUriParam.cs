@@ -18,7 +18,7 @@ namespace AliyunDnsSDK.Helper
         /// <param name="isAddParaMark">是否？</param>
         /// <param name="removeItems">要移除对象中的公共对象</param>
         /// <returns></returns>
-        internal static string Encode(object obj, string url = "", bool isAddParaMark = false, params string[] removeItems)
+        internal static string Encode(object obj, bool isSort,string url = "", bool isAddParaMark = false, params string[] removeItems)
         {
             if (!string.IsNullOrEmpty(url))
             {
@@ -47,7 +47,15 @@ namespace AliyunDnsSDK.Helper
                 }
             }
 
-            propertis = propertis.OrderBy(p => p.Name).ToList();   //对参数进行升序排序
+            if (isSort)
+            {
+                //对参数进行升序排序
+                propertis.Sort((pair1, pair2) => pair1.Name.CompareTo(pair2.Name));
+                if(Contains(propertis,"RR") && Contains(propertis, "RecordId"))
+                {
+                    propertis = Switch(propertis, "RR", "RecordId");
+                }
+            }
 
             StringBuilder sb = new StringBuilder();
             sb.Append(url);
@@ -80,6 +88,45 @@ namespace AliyunDnsSDK.Helper
         internal static object Decode(string url)
         {
             return null;
+        }
+
+        public static bool Contains(List<PropertyInfo> propertis, string propertyName)
+        {
+            bool isContains = false;
+            if (propertis == null || propertis.Count == 0)
+            {
+                return false;
+            }
+            foreach(PropertyInfo item in propertis)
+            {
+                if(item.Name == propertyName)
+                {
+                    isContains = true;
+                    break;
+                }
+            }
+            return isContains;
+        }
+
+        /// <summary>
+        /// 交换List中两个元素序列
+        /// </summary>
+        /// <param name="propertis"></param>
+        /// <param name="first"></param>
+        /// <param name="sec"></param>
+        /// <returns></returns>
+        private static List<PropertyInfo> Switch(List<PropertyInfo> propertis, string name1, string name2)
+        {
+            if (propertis == null || propertis.Count == 0)
+            {
+                return propertis;
+            }
+            int firtIndex = propertis.FindIndex(p => p.Name == name1);
+            int secIndex = propertis.FindIndex(p=>p.Name == name2);
+            PropertyInfo temp = propertis[firtIndex];
+            propertis[firtIndex] = propertis[secIndex];
+            propertis[secIndex] = temp;
+            return propertis;
         }
     }
 }

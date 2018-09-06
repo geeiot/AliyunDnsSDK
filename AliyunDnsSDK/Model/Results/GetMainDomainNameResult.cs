@@ -28,9 +28,5 @@ namespace AliyunDnsSDK.Model.Results
         /// 输入域名的级别
         /// </summary>
         public string DomainLevel { get; set; }
-
-        //========================================================
-
-        public override string RequestId { get; set; }
     }
 }

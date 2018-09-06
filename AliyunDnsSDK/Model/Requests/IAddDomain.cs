@@ -33,23 +33,5 @@ namespace AliyunDnsSDK.Model.Requests
         /// 域名分组，默认为“默认分组”的GroupId
         /// </summary>
         public string GroupId { get; set; }
-
-        //=========================================================================
-
-        public override string Format { get; set; }
-
-        public override string Version { get; set; }
-
-        public override string AccessKeyId { get; set; }
-
-        public override string Signature { get; set; }
-
-        public override string SignatureMethod { get; set; }
-
-        public override string Timestamp { get; set; }
-
-        public override string SignatureVersion { get; set; }
-
-        public override string SignatureNonce { get; set; }
     }
 }

@@ -33,10 +33,6 @@ namespace AliyunDnsSDK.Model.Results
         /// 域名操作日志列表
         /// </summary>
         public RecordLogs RecordLogs { get; set; }
-
-        //========================================================
-
-        public override string RequestId { get; set; }
     }
 
     public class RecordLogs

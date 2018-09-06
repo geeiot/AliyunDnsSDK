@@ -9,11 +9,11 @@ namespace AliyunDnsSDK.Model.Results
     /// <summary>
     /// 返回公共参数
     /// </summary>
-    public abstract class ResultPublicParameters
+    public class ResultPublicParameters
     {
         /// <summary>
         /// 唯一请求识别码
         /// </summary>
-        public abstract string RequestId { get; set; }
+        public virtual string RequestId { get; set; }
     }
 }

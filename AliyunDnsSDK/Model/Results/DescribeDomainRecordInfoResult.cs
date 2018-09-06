@@ -58,9 +58,5 @@ namespace AliyunDnsSDK.Model.Results
         /// 解析记录锁定状态，true/false
         /// </summary>
         public string Locked { get; set; }
-
-        //========================================================
-
-        public override string RequestId { get; set; }
     }
 }

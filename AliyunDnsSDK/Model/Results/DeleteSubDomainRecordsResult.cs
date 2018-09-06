@@ -22,9 +22,5 @@ namespace AliyunDnsSDK.Model.Results
         /// 被删除的解析记录总数
         /// </summary>
         public string TotalCount { get; set; }
-
-        //========================================================
-
-        public override string RequestId { get; set; }
     }
 }

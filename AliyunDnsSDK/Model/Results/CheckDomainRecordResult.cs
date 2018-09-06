@@ -17,9 +17,5 @@ namespace AliyunDnsSDK.Model.Results
         /// 是否存在解析记录。true为存在，false为不存在。
         /// </summary>
         public bool IsExist { get; set; }
-
-        //========================================================
-
-        public override string RequestId { get; set; }
     }
 }

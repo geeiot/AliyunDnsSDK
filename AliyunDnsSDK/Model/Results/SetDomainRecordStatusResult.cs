@@ -22,8 +22,5 @@ namespace AliyunDnsSDK.Model.Results
         /// 当前解析记录状态
         /// </summary>
         public string Status { get; set; }
-        //========================================================
-
-        public override string RequestId { get; set; }
     }
 }

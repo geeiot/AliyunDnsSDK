@@ -23,10 +23,6 @@ namespace AliyunDnsSDK.Model.Results
 
 
         public DnsProducts DnsProducts { get; set; }
-
-        //========================================================
-
-        public override string RequestId { get; set; }
     }
 
     public class DnsProducts

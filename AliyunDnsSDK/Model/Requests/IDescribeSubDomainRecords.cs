@@ -44,23 +44,5 @@ namespace AliyunDnsSDK.Model.Requests
         /// 如果不填写，则返回子域名对应的全部解析记录类型。解析类型包括(不区分大小写)：A、MX、CNAME、TXT、REDIRECT_URL、FORWORD_URL、NS、AAAA、SRV
         /// </summary>
         public ResolveLogFormat Type { get; set; }
-
-        //=========================================================================
-
-        public override string Format { get; set; }
-
-        public override string Version { get; set; }
-
-        public override string AccessKeyId { get; set; }
-
-        public override string Signature { get; set; }
-
-        public override string SignatureMethod { get; set; }
-
-        public override string Timestamp { get; set; }
-
-        public override string SignatureVersion { get; set; }
-
-        public override string SignatureNonce { get; set; }
     }
 }

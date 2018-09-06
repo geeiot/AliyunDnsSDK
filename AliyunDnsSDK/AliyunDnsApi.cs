@@ -83,7 +83,7 @@ namespace AliyunDnsSDK
             //设置公共参数默认值
             SetPublicParametersValue(obj);
             //创建Signature
-            string noSignUrl = ObjectToUriParam.Encode(obj, "", false, "Signature");
+            string noSignUrl = ObjectToUriParam.Encode(obj, true, "", false, "Signature");
             string sign = Encrypt.ToBase64hmac(BuildRequestPara(noSignUrl), Config.AccessKeySecret + "&");
             //创建Signature Dictionary
             Dictionary<string, string> signDic = new Dictionary<string, string>();
@@ -91,7 +91,7 @@ namespace AliyunDnsSDK
             //设置obj Signature值
             SetPublicParametersValue(obj, signDic);
             //创建URL
-            string signUrl = Config.ApiUrl + @"/?" + ObjectToUriParam.Encode(obj);
+            string signUrl = Config.ApiUrl + @"/?" + ObjectToUriParam.Encode(obj, false);
             return signUrl;
         }
 

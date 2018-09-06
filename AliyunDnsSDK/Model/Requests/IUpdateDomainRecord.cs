@@ -55,30 +55,32 @@ namespace AliyunDnsSDK.Model.Requests
         /// </summary>
         public long? Priority { get; set; }
 
+        private string _line { get; set; }
+
         /// <summary>
         /// 解析线路，默认为default。参见解析线路枚举
         /// </summary>
-        public string Line { get; set; }
-
-
-        //=========================================================================
-
-        public override string Format { get; set; }
-
-        public override string Version { get; set; }
-
-        public override string AccessKeyId { get; set; }
-
-        public override string Signature { get; set; }
-
-        public override string SignatureMethod { get; set; }
-
-        public override string Timestamp { get; set; }
-
-        public override string SignatureVersion { get; set; }
-
-        public override string SignatureNonce { get; set; }
-
-
+        public string Line
+        {
+            get
+            {
+                return _line;
+            }
+            set
+            {
+                if (value == DefaultResolveLine.defaultline.ToString())
+                {
+                    _line = "default";
+                }
+                else if (Enum.TryParse(value, out DefaultResolveLine tempLine))
+                {
+                    _line = value;
+                }
+                else
+                {
+                    _line = "default";
+                }
+            }
+        }
     }
 }

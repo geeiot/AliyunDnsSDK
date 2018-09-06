@@ -17,9 +17,5 @@ namespace AliyunDnsSDK.Model.Results
         /// 原始绑定的域名，如果为空，则为第一次绑定
         /// </summary>
         public string OriginalDomain { get; set; }
-
-        //========================================================
-
-        public override string RequestId { get; set; }
     }
 }

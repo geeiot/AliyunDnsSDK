@@ -14,9 +14,5 @@ namespace AliyunDnsSDK.Model.Results
     public class DeleteDomainResult : ResultPublicParameters
     {
         public string DomainName { get; set; }
-
-        //========================================================
-
-        public override string RequestId { get; set; }
     }
 }

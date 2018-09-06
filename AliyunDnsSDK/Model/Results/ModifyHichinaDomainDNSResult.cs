@@ -24,8 +24,5 @@ namespace AliyunDnsSDK.Model.Results
         /// </summary>
         public DnsServerType NewDnsServers { get; set; }
 
-        //========================================================
-
-        public override string RequestId { get; set; }
     }
 }

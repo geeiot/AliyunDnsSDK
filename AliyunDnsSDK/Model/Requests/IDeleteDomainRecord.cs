@@ -28,23 +28,5 @@ namespace AliyunDnsSDK.Model.Requests
         /// 解析记录的ID，此参数在添加解析时会返回，在获取域名解析列表时会返回
         /// </summary>
         public string RecordId { get; set; }
-
-        //=========================================================================
-
-        public override string Format { get; set; }
-
-        public override string Version { get; set; }
-
-        public override string AccessKeyId { get; set; }
-
-        public override string Signature { get; set; }
-
-        public override string SignatureMethod { get; set; }
-
-        public override string Timestamp { get; set; }
-
-        public override string SignatureVersion { get; set; }
-
-        public override string SignatureNonce { get; set; }
     }
 }
