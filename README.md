@@ -5,11 +5,9 @@
 
 **如何使用**
 
-提示：此SDK依赖于Newtonsoft.Json，请在Nuget中添加Newtonsoft.Json依赖。
-
 1、配置<br />
 有两种配置方法。<br />
-第一种，在项目Config文件的appSettings节点下面配置以下参数。（此方式不支持.NET Core）<br />
+第一种，在项目Config文件的appSettings节点下面配置以下参数。（不支持.NET Core）<br />
 ```csharp
 <appSettings>
     <!--请修改你的AccessKeyId和AccessKeySecret-->
@@ -28,12 +26,7 @@
 AliyunDnsApi request = new AliyunDnsApi("你的AccessKeyId", "你的AccessKeySecret");
 ```
 
-2、添加相关的模型<br />
-项目开发初期，大多数模型未添加，需要哪些模型，自行添加即可。<br />
-请求参数实体存放于Interfaces当中，以字母I开头，必须继承基类InterfacePublicParameters，返回数据实体存放于Results当中，以Result结尾，必须继承基类ResultPublicParameters。
-对于Result实体，可以将官方文档提供的JSON格式数据提供下面的工具直接转化为实体模型。工具地址：http://www.bejson.com/convert/json2csharp/ <br />
-
-3、代码使用（Demo）<br />
+2、代码使用（Demo）<br />
 ```csharp
 //Init Api
 AliyunDnsApi request = new AliyunDnsApi();
@@ -59,7 +52,7 @@ else
 }
 ```
 
-4、目前可用接口<br />
+3、目前可用接口<br />
 由于个人精力和条件有限，并未测试全部的接口，对于未测试接口，请自行测试并Debug，或者提交相关Issue。<br />
 
 | 序号  | 接口值  | 接口名称 | 是否测试 |  描述  |
