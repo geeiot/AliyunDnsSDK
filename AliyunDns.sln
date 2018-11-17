@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{7F020864-8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Demo", "Test.Demo\Test.Demo.csproj", "{2459211F-53AF-4ED0-8258-44DDCCD6CCF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AliyunDnsSDK.Core", "AliyunDnsSDK.Core\AliyunDnsSDK.Core.csproj", "{B075F581-36B0-414B-9B9D-C3C9BC936FDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AliyunDnsSDK.Core", "AliyunDnsSDK.Core\AliyunDnsSDK.Core.csproj", "{B075F581-36B0-414B-9B9D-C3C9BC936FDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Demo.Core", "Test.Demo.Core\Test.Demo.Core.csproj", "{47F37286-12F9-45DF-94D3-C8C87AE797DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Demo.Core", "Test.Demo.Core\Test.Demo.Core.csproj", "{47F37286-12F9-45DF-94D3-C8C87AE797DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
